@@ -32,10 +32,12 @@
           <td class="align-center"><%= blog_entry.title %></td>
           <td class="align-center"><%= blog_entry.summary.truncate(300) if blog_entry.summary %></td>
           <td class="align-center">
-            <%= content_tag(:i, '', :class => 'fa fa-ok green') if blog_entry.visible %>
+            <%= content_tag(:span, '', :class => 'glyphicon glyphicon-ok') if blog_entry.visible %>
           </td>
           <td class="actions">
-            <%= link_to_blog_in_store blog_entry, :no_text => true, target: '_blank' %>
+            <a href="../<%= blog_entry_permalink(blog_entry) %>" class="btn icon-link btn-sm live-link" target="_blank">
+              <%= content_tag(:span, '', :class => 'glyphicon glyphicon-eye-open') %>
+            </a>
             <%= link_to_edit blog_entry, :no_text => true %>
             <%= link_to_delete blog_entry, :no_text => true %>
           </td>

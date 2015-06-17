@@ -40,6 +40,13 @@ ul#blog_entry_entries {
   }
 }
 
+/*Add new icon for viewing live */
+
+a.live-link {
+  background-color: #588C4A;
+  color: #FFFFFF;
+}
+
 /* news archive widget */
 #news-archive {
   list-style: none;
