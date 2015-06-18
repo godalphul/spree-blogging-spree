@@ -64,3 +64,50 @@ a.live-link {
   }
   span { cursor: pointer; }
 }
+
+/* Custom stuff that needs cleaning */
+body#blog {
+  #sidebar {
+    padding: 0 3rem 0 0;
+    ul, li {
+      margin-left: 0;
+      padding-left: 0;
+    }
+    .archive-year {
+      font-weight: 700;
+      margin-bottom: 1em;
+    }
+    .total-posts {
+      background: #777777;
+      color: #FFF;
+      text-align: center;
+      padding: 0;
+      margin: 0;
+      border-radius: 63%;
+      max-width: 28px;
+    }
+    .recent_blog_entries {
+      li {
+        a {
+          text-transform: underline;
+        }
+      }
+      .blog_entry_date {
+        color: #777777;
+      }
+    }
+    .blog_entry_details {
+      margin-top: 1rem;
+      border-top: 1px solid rgba(25,25,25,0.15);
+    }
+    .blog_read_more {
+      a {
+        border-bottom: 1px solid #373737;
+      }
+    }
+    h5 {
+      margin-top: 2rem;
+      border-bottom: 1px solid #373737;
+    }
+  }
+}
