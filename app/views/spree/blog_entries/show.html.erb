@@ -16,7 +16,7 @@
     <h1><%= @blog_entry.title %></h1>
 
     <div class="blog_entry_body">
-      <%= @blog_entry.body.gsub(/"/,"").gsub(/"/,"") %>
+      <%= raw @blog_entry.body %>
     </div>
 
     <%= render :partial => 'spree/blog_entries/blog_entry_details', :locals => {:blog_entry => @blog_entry} %>
