@@ -1,3 +1,5 @@
+<% @body_id = 'blog' %>
+
 <% content_for :head do %>
   <% if !@blog_entry.author.blank? and !@blog_entry.author.google_plus_url.blank? %>
     <link rel="author" href="<%= @blog_entry.author.google_plus_url %>"/>
@@ -14,7 +16,7 @@
     <h1><%= @blog_entry.title %></h1>
 
     <div class="blog_entry_body">
-      <%== @blog_entry.body %>
+      <%= @blog_entry.body %>
     </div>
 
     <%= render :partial => 'spree/blog_entries/blog_entry_details', :locals => {:blog_entry => @blog_entry} %>
