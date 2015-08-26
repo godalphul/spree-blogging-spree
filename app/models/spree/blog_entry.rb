@@ -1,4 +1,4 @@
-brequire 'acts-as-taggable-on'
+require 'acts-as-taggable-on'
 
 class Spree::BlogEntry < ActiveRecord::Base
   acts_as_taggable_on :tags, :categories
