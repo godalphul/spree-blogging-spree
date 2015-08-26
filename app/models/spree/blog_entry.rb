@@ -1,4 +1,4 @@
-require 'acts-as-taggable-on'
+brequire 'acts-as-taggable-on'
 
 class Spree::BlogEntry < ActiveRecord::Base
   acts_as_taggable_on :tags, :categories
@@ -17,9 +17,9 @@ class Spree::BlogEntry < ActiveRecord::Base
     belongs_to :author
   end
 
-  has_one :blog_entry_image, :as => :viewable, :dependent => :destroy, :class_name => 'Spree::BlogEntryImage'
-  accepts_nested_attributes_for :blog_entry_image, :reject_if => :all_blank
-
+  has_one :images, -> { order(:position) }, as: :viewable, dependent: :destroy, class_name: "Spree::Image"
+  accepts_nested_attributes_for :images, :allow_destroy => true, :reject_if => :all_blank
+  
   def entry_summary(chars=200)
     if summary.blank?
       "#{body[0...chars]}..."
