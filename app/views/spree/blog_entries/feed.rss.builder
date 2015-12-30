@@ -13,9 +13,6 @@ xml.rss :version => "2.0" do
         xml.pubDate blog_entry.published_at.to_s(:rfc822)
         xml.link blog_entry_url_permalink(blog_entry)
         xml.guid blog_entry_url_permalink(blog_entry)
-        blog_entry.tag_list.each do |tag|
-          xml.category tag
-        end
       end
     end
   end
